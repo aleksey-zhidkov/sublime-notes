@@ -1874,7 +1874,7 @@
 			<key>comment</key>
 			<string>Ordered bullets</string>
 			<key>match</key>
-			<string>^([ \t]*[0-9a-z]+[\:\.\)]\)?\s(\w+\:)?)</string>
+			<string>^([ \t]*[0-9\p{Ll}]+[\:\.\)]\)?\s(\w+\:)?)</string>
 			<key>name</key>
 			<string>keyword.operator.notes</string>
 		</dict>
@@ -1898,7 +1898,7 @@
 			<key>comment</key>
 			<string>Emphasis</string>
 			<key>match</key>
-			<string>(\*+[a-zA-Z \t]+\*+)</string>
+			<string>(\*+[\p{L} \t]+\*+)</string>
 			<key>name</key>
 			<string>keyword.other.notes</string>
 		</dict>
@@ -1938,7 +1938,7 @@
 			<key>comment</key>
 			<string>Headers</string>
 			<key>match</key>
-			<string>^(\p{Lu}.*\:)$</string>
+			<string>^([\p{Lu}].*\:)$</string>
 			<key>name</key>
 			<string>entity.name.tag.notes</string>
 		</dict>
@@ -1970,7 +1970,7 @@
 			<key>comment</key>
 			<string>Warning/critical</string>
 			<key>match</key>
-			<string>(?![a-zA-Z])\!+[^\!\n\r]+\!*</string>
+			<string>(?![\p{L}])\!+[^\!\n\r]+\!*</string>
 			<key>name</key>
 			<string>invalid.deprecated.notes</string>
 		</dict>
